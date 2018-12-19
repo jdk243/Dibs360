@@ -1,115 +1,44 @@
 export const spaces = {
-  apartment: {
-    foyer: {
-      assetName: 'home/homeFoyer.jpg',
-      links: [
-        {
-          link: 'apartment.kitchen',
-          translation: [
-            { translateX: 1 },
-            { translateY: 0 },
-            { translateZ: -1 },
+  hans: {
+      hans1: {
+          assetName: 'hans/hans1.jpg'
+          links: [
+              {
+                  link: 'hans.hans2',
+                  translations: [],
+              },
+              {
+                  link: 'hans.hans3',
+                  translations: [],
+              },
           ],
-        },
-        {
-          link: 'apartment.stair',
-          translation: [
-            { translateX: 0 },
-            { translateY: 2 },
-            { translateZ: -2 },
+      },
+      hans2: {
+          assetName: 'hans/hans2.jpg'
+          links: [
+              {
+                  link: 'hans.hans1',
+                  translations: [],
+              },
+              {
+                  link: 'hans.hans3',
+                  translations: [],
+              },
           ],
-        },
-      ],
-    },
-    kitchen: {
-      assetName: 'home/homeKitchen.jpg',
-      links: [
-        {
-          link: 'apartment.hall',
-          translation: [
-            { translateX: 1 },
-            { translateY: 0 },
-            { translateZ: 1 },
+      },
+      hans3: {
+          assetName: 'hans/hans3.jpg'
+          links: [
+              {
+                  link: 'hans.hans1',
+                  translations: [],
+              },
+              {
+                  link: 'hans.hans2',
+                  translations: [],
+              },
           ],
-        },
-        {
-          link: 'apartment.foyer',
-          translation: [
-            { translateX: 1 },
-            { translateY: 0 },
-            { translateZ: -1 },
-          ],
-        },
-      ],
-    },
-    hall: {
-      assetName: 'home/homeHall.jpg',
-      links: [
-        {
-          link: 'apartment.kitchen',
-          translation: [
-            { translateX: -2 },
-            { translateY: 0 },
-            { translateZ: 0 },
-          ],
-        },
-      ],
-    },
-    stair: {
-      assetName: 'home/homeStairs.jpg',
-      links: [
-        {
-          link: 'apartment.foyer',
-          translation: [
-            { translateX: 0 },
-            { translateY: -2 },
-            { translateZ: 2 },
-          ],
-        },
-        {
-          link: 'apartment.livingRoom1',
-          translation: [
-            { translateX: -1 },
-            { translateY: 2 },
-            { translateZ: 2 },
-          ],
-        },
-      ],
-    },
-    livingRoom1: {
-      assetName: 'home/homeLivingRoom1.jpg',
-      links: [
-        {
-          link: 'apartment.stair',
-          translation: [
-            { translateX: 2 },
-            { translateY: -2 },
-            { translateZ: -1 },
-          ],
-        },
-        {
-          link: 'apartment.livingRoom2',
-          translation: [
-            { translateX: -3 },
-            { translateY: 0 },
-            { translateZ: 2 },
-          ],
-        },
-      ],
-    },
-    livingRoom2: {
-      assetName: 'home/homeLivingRoom2.jpg',
-      links: [
-        {
-          link: 'apartment.livingRoom1',
-          translation: [
-            { translateX: -1 },
-            { translateY: 0 },
-            { translateZ: -3 },
-          ],
-        },
-      ],
-    },
+      }
   },
 
   office: {
