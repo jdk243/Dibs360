@@ -19,14 +19,14 @@ function init(bundle, parent, options = {}) {
 
   r360.renderToLocation(
     r360.createRoot('Location', {
-      location: 'office.a',
+      location: 'hans.hans1',
     }),
     r360.getDefaultLocation()
   );
 
   // Load the initial environment
   r360.compositor.setBackground(
-    r360.getAssetURL(get(spaces, 'office.a.assetName'))
+    r360.getAssetURL(get(spaces, 'hans.hans1.assetName'))
   );
 }
 
