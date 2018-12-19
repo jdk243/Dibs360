@@ -8,9 +8,10 @@ import {
   Environment,
   asset,
 } from 'react-360';
-import Entity from 'Entity';
 import get from 'lodash.get';
 import { spaces } from './spaces';
+
+import { Dibs3603D } from './dibs3603d';
 
 export default class Dibs360 extends React.Component {
   // Our component will keep track of this state
@@ -56,18 +57,6 @@ export default class Dibs360 extends React.Component {
       </View>
     );
   }
-}
-
-export class Dibs3603D extends React.Component {
-    render() {
-        return (
-            <View style={{
-              transform: [{ translate: [0, 0, -2] }]
-            }}>
-                <Entity source={{obj: asset('table.obj') }}/>
-            </View>
-        )
-    }
 }
 
 export class Location extends React.Component {

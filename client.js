@@ -20,12 +20,10 @@ function init(bundle, parent, options = {}) {
   //   r360.getDefaultSurface()
   // );
 
-  // r360.renderToLocation(
-  //   r360.createRoot('Dibs3603D', {
-  //     /* initial props */
-  //   }),
-  //   new Location([0, -1, -0.125])
-  // );
+  r360.renderToLocation(
+    r360.createRoot('Dibs3603D'),
+    r360.getDefaultLocation()
+  );
 
   r360.renderToLocation(
     r360.createRoot('Location', {
