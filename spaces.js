@@ -1,64 +1,106 @@
 export const spaces = {
+  hans: {
+      hans1: {
+          assetName: 'hans/hans1.jpg'
+          links: [
+              {
+                  link: 'hans.hans2',
+                  translations: [],
+              },
+              {
+                  link: 'hans.hans3',
+                  translations: [],
+              },
+          ],
+      },
+      hans2: {
+          assetName: 'hans/hans2.jpg'
+          links: [
+              {
+                  link: 'hans.hans1',
+                  translations: [],
+              },
+              {
+                  link: 'hans.hans3',
+                  translations: [],
+              },
+          ],
+      },
+      hans3: {
+          assetName: 'hans/hans3.jpg'
+          links: [
+              {
+                  link: 'hans.hans1',
+                  translations: [],
+              },
+              {
+                  link: 'hans.hans2',
+                  translations: [],
+              },
+          ],
+      }
+  },
+
   office: {
-    a: {
+    australia: {
       assetName: 'office/office1.jpg',
       links: [
         {
-          link: 'office.b',
+          link: 'office.walkway',
           translation: [
-            { translateX: -2 },
-            { translateY: -1 },
-            { translateZ: 0 },
+            { translateX: 0.5 },
+            { translateY: -4 },
+            { translateZ: 20 },
           ],
         },
         {
-          link: 'office.c',
+          link: 'office.bulgari',
           translation: [
-            { translateX: -0.5 },
-            { translateY: -1 },
-            { translateZ: -3 },
+            { translateX: -27 },
+            { translateY: -4 },
+            { translateZ: 30 },
           ],
         },
       ],
     },
-    b: {
+    walkway: {
       assetName: 'office/office2.jpg',
       links: [
         {
-          link: 'office.a',
+          link: 'office.australia',
           translation: [
-            { translateX: 2 },
-            { translateY: -1 },
-            { translateZ: 0 },
+            { translateX: -3 },
+            { translateY: -4 },
+            { translateZ: 20 },
           ],
         },
         {
-          link: 'office.c',
+          link: 'office.bulgari',
           translation: [
-            { translateX: 1.5 },
-            { translateY: -1 },
-            { translateZ: -3 },
+            { translateX: 20 },
+            { translateY: -4 },
+            { translateZ: 1 },
           ],
         },
       ],
     },
-    c: {
+    bulgari: {
       assetName: 'office/office3.jpg',
       links: [
         {
-          link: 'office.b',
+          link: 'office.walkway',
           translation: [
-            { translateX: -1.5 },
-            { translateY: -1 },
-            { translateZ: 3 },
+            { translateX: 1 },
+            { translateY: -4 },
+            { translateZ: -20 },
           ],
         },
         {
-          link: 'office.a',
+          link: 'office.australia',
           translation: [
-            { translateX: 0.5 },
-            { translateY: -1 },
-            { translateZ: 3 },
+            { translateX: -20 },
+            { translateY: -4 },
+            { translateZ: -24 },
           ],
         },
       ],
