@@ -12,14 +12,6 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  // Render your app content to the default cylinder surface
-  // r360.renderToSurface(
-  //   r360.createRoot('Dibs360', {
-  //     /* initial props */
-  //   }),
-  //   r360.getDefaultSurface()
-  // );
-
   r360.renderToLocation(
     r360.createRoot('Dibs3603D'),
     r360.getDefaultLocation()
@@ -27,14 +19,14 @@ function init(bundle, parent, options = {}) {
 
   r360.renderToLocation(
     r360.createRoot('Location', {
-      location: 'office.australia',
+      location: 'office.a',
     }),
     r360.getDefaultLocation()
   );
 
   // Load the initial environment
   r360.compositor.setBackground(
-    r360.getAssetURL(get(spaces, 'office.australia.assetName'))
+    r360.getAssetURL(get(spaces, 'office.a.assetName'))
   );
 }
 

@@ -9,9 +9,9 @@ import Entity from 'Entity';
 import { spaces } from './spaces';
 
 const baseLocation = {
-    x: -3,
-    y: -1,
-    z: 3.5,
+    x: -0.5,
+    y: -0.5,
+    z: -1.5,
 };
 
 export class Dibs3603D extends React.Component {
@@ -44,9 +44,9 @@ export class Dibs3603D extends React.Component {
         console.log('translation', translation);
         if (translation) {
             this.setState({
-                x: baseLocation.x + (translation[0].translateX / 4),
+                x: baseLocation.x + (translation[0].translateX),
                 y: baseLocation.y,
-                z: baseLocation.z + (translation[2].translateZ / 4),
+                z: baseLocation.z + (translation[2].translateZ),
             });
         }
     }
