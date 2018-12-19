@@ -9,7 +9,8 @@ import {
   asset,
 } from 'react-360';
 import Entity from 'Entity';
-import { home as ApartmentSpace, office as OfficeSpace } from './spaces';
+import get from 'lodash.get';
+import { spaces } from './spaces';
 
 export default class Dibs360 extends React.Component {
   // Our component will keep track of this state
@@ -23,12 +24,12 @@ export default class Dibs360 extends React.Component {
   };
 
   setOffice = () => {
-    Environment.setBackgroundImage(asset(OfficeSpace.bulgari.assetName));
+    Environment.setBackgroundImage(asset(spaces.office.bulgari.assetName));
     this.setState({ scene: 'office' });
   };
 
   setApartment = () => {
-    Environment.setBackgroundImage(asset(ApartmentSpace.foyer.assetName));
+    Environment.setBackgroundImage(asset(spaces.apartment.foyer.assetName));
     this.setState({ scene: 'apartment' });
   };
 
@@ -58,15 +59,54 @@ export default class Dibs360 extends React.Component {
 }
 
 export class Dibs3603D extends React.Component {
-    render() {
-        return (
-            <View style={{
-              transform: [{ translate: [0, 0, -2] }]
-            }}>
-                <Entity source={{obj: asset('puck.obj') }}/>
-            </View>
-        )
-    }
+  render() {
+    return (
+      <View
+        style={{
+          transform: [{ translate: [0, 0, -2] }],
+        }}>
+        <Entity source={{ obj: asset('puck.obj') }} />
+      </View>
+    );
+  }
+}
+
+export class Location extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      location: props.location,
+    };
+  }
+
+  moveLocation = location => {
+    Environment.setBackgroundImage(asset(get(spaces, location).assetName));
+    this.setState({ location });
+  };
+
+  renderNavTiles = () => {
+    const currentLocation = get(spaces, this.state.location);
+    const adjacentLocations = currentLocation.links;
+
+    console.log(currentLocation);
+    return adjacentLocations.map(location => {
+      console.log(location.link);
+      console.log(location.translation);
+      return (
+        <View style={{ transform: location.translation }}>
+          <VrButton
+            style={styles.navButton}
+            onClick={() => this.moveLocation(location.link)}
+          />
+        </View>
+      );
+    });
+  };
+
+  render() {
+    return <View>{this.renderNavTiles()}</View>;
+  }
 }
 
 const styles = StyleSheet.create({
@@ -87,13 +127,15 @@ const styles = StyleSheet.create({
     borderWidth: 2,
   },
   navButton: {
-    width: 50,
-    height: 50,
+    width: 1,
+    height: 1,
     borderRadius: 999,
-    backgroundColor: '#BBBBBB',
+    backgroundColor: '#0000ff',
     borderColor: '#639dda',
+    transform: [{ rotateX: 90 }],
   },
 });
 
 AppRegistry.registerComponent('Dibs360', () => Dibs360);
 AppRegistry.registerComponent('Dibs3603D', () => Dibs3603D);
+AppRegistry.registerComponent('Location', () => Location);

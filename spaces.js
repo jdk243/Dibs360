@@ -1,106 +1,164 @@
-export const home = {
-  foyer: {
-    assetName: 'home/homeFoyer.jpg',
-    links: [
-      {
-        link: 'kitchen',
-        position: [1, 0, -1],
-      },
-      {
-        link: 'stair',
-        position: [0, 2, -2],
-      },
-    ],
+export const spaces = {
+  apartment: {
+    foyer: {
+      assetName: 'home/homeFoyer.jpg',
+      links: [
+        {
+          link: 'apartment.kitchen',
+          translation: [
+            { translateX: 1 },
+            { translateY: 0 },
+            { translateZ: -1 },
+          ],
+        },
+        {
+          link: 'apartment.stair',
+          translation: [
+            { translateX: 0 },
+            { translateY: 2 },
+            { translateZ: -2 },
+          ],
+        },
+      ],
+    },
+    kitchen: {
+      assetName: 'home/homeKitchen.jpg',
+      links: [
+        {
+          link: 'apartment.hall',
+          translation: [
+            { translateX: 1 },
+            { translateY: 0 },
+            { translateZ: 1 },
+          ],
+        },
+        {
+          link: 'apartment.foyer',
+          translation: [
+            { translateX: 1 },
+            { translateY: 0 },
+            { translateZ: -1 },
+          ],
+        },
+      ],
+    },
+    hall: {
+      assetName: 'home/homeHall.jpg',
+      links: [
+        {
+          link: 'apartment.kitchen',
+          translation: [
+            { translateX: -2 },
+            { translateY: 0 },
+            { translateZ: 0 },
+          ],
+        },
+      ],
+    },
+    stair: {
+      assetName: 'home/homeStairs.jpg',
+      links: [
+        {
+          link: 'apartment.foyer',
+          translation: [
+            { translateX: 0 },
+            { translateY: -2 },
+            { translateZ: 2 },
+          ],
+        },
+        {
+          link: 'apartment.livingRoom1',
+          translation: [
+            { translateX: -1 },
+            { translateY: 2 },
+            { translateZ: 2 },
+          ],
+        },
+      ],
+    },
+    livingRoom1: {
+      assetName: 'home/homeLivingRoom1.jpg',
+      links: [
+        {
+          link: 'apartment.stair',
+          translation: [
+            { translateX: 2 },
+            { translateY: -2 },
+            { translateZ: -1 },
+          ],
+        },
+        {
+          link: 'apartment.livingRoom2',
+          translation: [
+            { translateX: -3 },
+            { translateY: 0 },
+            { translateZ: 2 },
+          ],
+        },
+      ],
+    },
+    livingRoom2: {
+      assetName: 'home/homeLivingRoom2.jpg',
+      links: [
+        {
+          link: 'apartment.livingRoom1',
+          translation: [
+            { translateX: -1 },
+            { translateY: 0 },
+            { translateZ: -3 },
+          ],
+        },
+      ],
+    },
   },
-  kitchen: {
-    assetName: 'home/homeKitchen.jpg',
-    links: [
-      {
-        link: 'hall',
-        position: [1, 0, 1],
-      },
-      {
-        link: 'foyer',
-        position: [1, 0, -1],
-      },
-    ],
-  },
-  hall: {
-    assetName: 'home/homeHall.jpg',
-    links: [
-      {
-        link: 'kitchen',
-        position: [-2, 0, 0],
-      },
-    ],
-  },
-  stair: {
-    assetName: 'home/homeStairs.jpg',
-    links: [
-      {
-        link: 'foyer',
-        position: [0, -2, 2],
-      },
-      {
-        link: 'livingRoom1',
-        position: [-1, 2, 2],
-      },
-    ],
-  },
-  livingRoom1: {
-    assetName: 'home/homeLivingRoom1.jpg',
-    links: [
-      {
-        link: 'stair',
-        position: [2, -2, -1],
-      },
-      {
-        link: 'livingRoom2',
-        position: [-3, 0, 2],
-      },
-    ],
-  },
-  livingRoom2: {
-    assetName: 'home/homeLivingRoom2.jpg',
-    links: [
-      {
-        link: 'livingRoom1',
-        position: [-1, 0, -3],
-      },
-    ],
-  },
-};
 
-export const office = {
-  australia: {
-    assetName: 'office/office1.jpg',
-    links: [
-      {
-        link: 'walkway',
-        positon: [3, 0, -1],
-      },
-    ],
-  },
-  walkway: {
-    assetName: 'office/office2.jpg',
-    links: [
-      {
-        link: 'australia',
-        positon: [-3, 0, 0],
-      },
-      {
-        link: 'bulgari',
-        positon: [4, 0, 1],
-      },
-    ],
-  },
-  bulgari: {
-    assetName: 'office/office3.jpg',
-    links: [
-      {
-        link: 'walkway',
-        positon: [1, 0, -3],
-      },
-    ],
+  office: {
+    australia: {
+      assetName: 'office/office1.jpg',
+      links: [
+        {
+          link: 'office.walkway',
+          translation: [
+            { translateX: 0.5 },
+            { translateY: -4 },
+            { translateZ: 20 },
+          ],
+        },
+      ],
+    },
+    walkway: {
+      assetName: 'office/office2.jpg',
+      links: [
+        {
+          link: 'office.australia',
+          translation: [
+            { translateX: -3 },
+            { translateY: -4 },
+            { translateZ: 0 },
+          ],
+        },
+        {
+          link: 'office.bulgari',
+          translation: [
+            { translateX: 4 },
+            { translateY: -4 },
+            { translateZ: 1 },
+          ],
+        },
+      ],
+    },
+    bulgari: {
+      assetName: 'office/office3.jpg',
+      links: [
+        {
+          link: 'office.walkway',
+          translation: [
+            { translateX: 1 },
+            { translateY: -4 },
+            { translateZ: -3 },
+          ],
+        },
+      ],
+    },
   },
 };
