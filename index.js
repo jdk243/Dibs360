@@ -59,16 +59,15 @@ export default class Dibs360 extends React.Component {
 }
 
 export class Dibs3603D extends React.Component {
-  render() {
-    return (
-      <View
-        style={{
-          transform: [{ translate: [0, 0, -2] }],
-        }}>
-        <Entity source={{ obj: asset('puck.obj') }} />
-      </View>
-    );
-  }
+    render() {
+        return (
+            <View style={{
+              transform: [{ translate: [0, 0, -2] }]
+            }}>
+                <Entity source={{obj: asset('table.obj') }}/>
+            </View>
+        )
+    }
 }
 
 export class Location extends React.Component {
