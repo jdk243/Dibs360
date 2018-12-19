@@ -8,6 +8,7 @@ import {
   Environment,
   asset,
 } from 'react-360';
+import Entity from 'Entity';
 import { home as ApartmentSpace, office as OfficeSpace } from './spaces';
 
 export default class Dibs360 extends React.Component {
@@ -56,6 +57,18 @@ export default class Dibs360 extends React.Component {
   }
 }
 
+export class Dibs3603D extends React.Component {
+    render() {
+        return (
+            <View style={{
+              transform: [{ translate: [0, 0, -2] }]
+            }}>
+                <Entity source={{obj: asset('puck.obj') }}/>
+            </View>
+        )
+    }
+}
+
 const styles = StyleSheet.create({
   panel: {
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
@@ -83,3 +96,4 @@ const styles = StyleSheet.create({
 });
 
 AppRegistry.registerComponent('Dibs360', () => Dibs360);
+AppRegistry.registerComponent('Dibs3603D', () => Dibs3603D);
