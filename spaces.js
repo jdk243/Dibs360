@@ -124,6 +124,14 @@ export const spaces = {
             { translateZ: 20 },
           ],
         },
+        {
+          link: 'office.bulgari',
+          translation: [
+            { translateX: -27 },
+            { translateY: -4 },
+            { translateZ: 30 },
+          ],
+        },
       ],
     },
     walkway: {
@@ -134,13 +142,13 @@ export const spaces = {
           translation: [
             { translateX: -3 },
             { translateY: -4 },
-            { translateZ: 0 },
+            { translateZ: 20 },
           ],
         },
         {
           link: 'office.bulgari',
           translation: [
-            { translateX: 4 },
+            { translateX: 20 },
             { translateY: -4 },
             { translateZ: 1 },
           ],
@@ -155,7 +163,15 @@ export const spaces = {
           translation: [
             { translateX: 1 },
             { translateY: -4 },
-            { translateZ: -3 },
+            { translateZ: -20 },
+          ],
+        },
+        {
+          link: 'office.australia',
+          translation: [
+            { translateX: -20 },
+            { translateY: -4 },
+            { translateZ: -24 },
           ],
         },
       ],
