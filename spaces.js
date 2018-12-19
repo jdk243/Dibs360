@@ -7,7 +7,7 @@ export const spaces = {
                   link: 'hans.hans2',
                   translations: [{
                       translateX: -2,
-                      XranslateY: 0,
+                      translateY: -1,
                       translateZ: 0,
                   }],
               },
@@ -15,7 +15,7 @@ export const spaces = {
                   link: 'hans.hans3',
                   translations: [{
                       translateX: -0.5,
-                      XranslateY: 0,
+                      translateY: -1,
                       translateZ: -3,
                   }],
               },
@@ -28,7 +28,7 @@ export const spaces = {
                   link: 'hans.hans1',
                   translations: [{
                       translateX: 2,
-                      XranslateY: 0,
+                      translateY: -1,
                       translateZ: 0,
                   }],
               },
@@ -36,7 +36,7 @@ export const spaces = {
                   link: 'hans.hans3',
                   translations: [{
                       translateX: 1.5,
-                      XranslateY: 0,
+                      translateY: -1,
                       translateZ: -3,
                   }],
               },
@@ -49,7 +49,7 @@ export const spaces = {
                   link: 'hans.hans1',
                   translations: [{
                       translateX: 0.5,
-                      XranslateY: 0,
+                      translateY: -1,
                       translateZ: -3,
                   }],
               },
@@ -57,7 +57,7 @@ export const spaces = {
                   link: 'hans.hans2',
                   translations: [{
                       translateX: -1.5,
-                      XranslateY: 0,
+                      translateY: -1,
                       translateZ: -3,
                   }],
               },
