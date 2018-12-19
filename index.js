@@ -63,7 +63,7 @@ export class Dibs3603D extends React.Component {
             <View style={{
               transform: [{ translate: [0, 0, -2] }]
             }}>
-                <Entity source={{obj: asset('puck.obj') }}/>
+                <Entity source={{obj: asset('table.obj') }}/>
             </View>
         )
     }
