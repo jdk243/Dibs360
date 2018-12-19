@@ -68,8 +68,9 @@ export class Location extends React.Component {
     };
   }
 
-  moveLocation = location => {
+  moveLocation = (location, event) => {
     Environment.setBackgroundImage(asset(get(spaces, location).assetName));
+    window.dispatchEvent(new CustomEvent('moveLocation', { detail: { location, currentLocation: this.state.location } }));
     this.setState({ location });
   };
 
@@ -85,7 +86,9 @@ export class Location extends React.Component {
         <View style={{ transform: location.translation }}>
           <VrButton
             style={styles.navButton}
-            onClick={() => this.moveLocation(location.link)}
+            onClick={(event) => {
+                return this.moveLocation(location.link, event);
+            }}
           />
         </View>
       );
