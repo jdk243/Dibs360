@@ -1,67 +1,41 @@
-export const spaces = {
-  hans: {
-      hans1: {
-          assetName: 'hans/hans1.jpg',
-          links: [
-              {
-                  link: 'hans.hans2',
-                  translations: [{
-                      translateX: -2,
-                      translateY: -1,
-                      translateZ: 0,
-                  }],
-              },
-              {
-                  link: 'hans.hans3',
-                  translations: [{
-                      translateX: -0.5,
-                      translateY: -1,
-                      translateZ: -3,
-                  }],
-              },
-          ],
+export const hans = {
+  hans1: {
+    assetName: 'hans/hans1.jpg',
+    links: [
+      {
+        link: 'hans2',
+        translate: { translate: [-2.3, -1.4, -0.3] },
       },
-      hans2: {
-          assetName: 'hans/hans2.jpg',
-          links: [
-              {
-                  link: 'hans.hans1',
-                  translations: [{
-                      translateX: 2,
-                      translateY: -1,
-                      translateZ: 0,
-                  }],
-              },
-              {
-                  link: 'hans.hans3',
-                  translations: [{
-                      translateX: 1.5,
-                      translateY: -1,
-                      translateZ: -3,
-                  }],
-              },
-          ],
+      {
+        link: 'hans3',
+        translate: { translate: [-1, -1.4, -4.3] },
       },
-      hans3: {
-          assetName: 'hans/hans3.jpg',
-          links: [
-              {
-                  link: 'hans.hans1',
-                  translations: [{
-                      translateX: 0.5,
-                      translateY: -1,
-                      translateZ: -3,
-                  }],
-              },
-              {
-                  link: 'hans.hans2',
-                  translations: [{
-                      translateX: -1.5,
-                      translateY: -1,
-                      translateZ: -3,
-                  }],
-              },
-          ],
-      }
+    ],
+  },
+  hans2: {
+    assetName: 'hans/hans2.jpg',
+    links: [
+      {
+        link: 'hans1',
+        translate: { translate: [2.3, -1.4, 0.3] },
+      },
+      {
+        link: 'hans3',
+        translate: { translate: [1.3, -1.4, -4] },
+      },
+    ],
+  },
+  hans3: {
+    assetName: 'hans/hans3.jpg',
+    links: [
+      {
+        link: 'hans1',
+        translate: { translate: [1, -1.4, 4.3] },
+      },
+      {
+        link: 'hans2',
+        translate: { translate: [-1.3, -1.4, 4] },
+      },
+    ],
   },
 };

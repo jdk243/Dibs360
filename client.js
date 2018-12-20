@@ -2,9 +2,9 @@
 // If you want to modify your application's content, start in "index.js"
 
 import { ReactInstance, Location } from 'react-360-web';
-import get from 'lodash.get';
-import { spaces } from './spaces';
+import { hans } from './spaces';
 
+const initialLocation = 'hans3Z';
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here
@@ -12,21 +12,23 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  r360.renderToLocation(
-    r360.createRoot('Dibs3603D'),
-    r360.getDefaultLocation()
-  );
+  // r360.renderToLocation(
+  //   r360.createRoot('Dibs3603D', {
+  //     /* initial props */
+  //   }),
+  //   new Location([0, -1, -0.125])
+  // );
 
   r360.renderToLocation(
-    r360.createRoot('Location', {
-      location: 'hans.hans1',
+    r360.createRoot('Tour', {
+      location: initialLocation,
     }),
     r360.getDefaultLocation()
   );
 
   // Load the initial environment
   r360.compositor.setBackground(
-    r360.getAssetURL(get(spaces, 'hans.hans1.assetName'))
+    r360.getAssetURL(hans[initialLocation].assetName)
   );
 }
 
