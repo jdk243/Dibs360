@@ -12,12 +12,12 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  // r360.renderToLocation(
-  //   r360.createRoot('Dibs3603D', {
-  //     /* initial props */
-  //   }),
-  //   new Location([0, -1, -0.125])
-  // );
+  r360.renderToLocation(
+    r360.createRoot('Dibs3603D', {
+      /* initial props */
+    }),
+    new Location([0, -1, -0.125])
+  );
 
   r360.renderToLocation(
     r360.createRoot('Tour', {
