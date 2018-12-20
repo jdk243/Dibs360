@@ -4,7 +4,7 @@
 import { ReactInstance, Location } from 'react-360-web';
 import { hans } from './spaces';
 
-const initialLocation = 'hans3Z';
+const initialLocation = 'hans3';
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here

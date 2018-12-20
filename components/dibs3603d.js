@@ -6,7 +6,7 @@ import {
   asset,
 } from 'react-360';
 import Entity from 'Entity';
-import { spaces } from './spaces';
+import { spaces } from '../spaces';
 
 const baseLocation = {
     x: -0.5,
