@@ -4,20 +4,13 @@
 import { ReactInstance, Location } from 'react-360-web';
 import { hans } from './spaces';
 
-const initialLocation = 'hans3';
+const initialLocation = 'hans1';
 function init(bundle, parent, options = {}) {
   const r360 = new ReactInstance(bundle, parent, {
     // Add custom options here
     fullScreen: true,
     ...options,
   });
-
-  r360.renderToLocation(
-    r360.createRoot('Dibs3603D', {
-      /* initial props */
-    }),
-    new Location([0, -1, -0.125])
-  );
 
   r360.renderToLocation(
     r360.createRoot('Tour', {

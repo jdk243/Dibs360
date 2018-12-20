@@ -4,11 +4,11 @@ export const hans = {
     links: [
       {
         link: 'hans2',
-        translate: { translate: [-2.3, -1.4, -0.3] },
+        translate: [-2.3, -1.4, -0.3],
       },
       {
         link: 'hans3',
-        translate: { translate: [-1, -1.4, -4.3] },
+        translate: [-1, -1.4, -4.3],
       },
     ],
   },
@@ -17,11 +17,11 @@ export const hans = {
     links: [
       {
         link: 'hans1',
-        translate: { translate: [2.3, -1.4, 0.3] },
+        translate: [2.3, -1.4, 0.3],
       },
       {
         link: 'hans3',
-        translate: { translate: [1.3, -1.4, -4] },
+        translate: [1.3, -1.4, -4],
       },
     ],
   },
@@ -30,11 +30,11 @@ export const hans = {
     links: [
       {
         link: 'hans1',
-        translate: { translate: [1, -1.4, 4.3] },
+        translate: [1, -1.4, 4.3],
       },
       {
         link: 'hans2',
-        translate: { translate: [-1.3, -1.4, 4] },
+        translate: [-1.3, -1.4, 4],
       },
     ],
   },

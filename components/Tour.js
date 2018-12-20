@@ -8,6 +8,13 @@ import {
   asset,
 } from 'react-360';
 import { hans } from '../spaces';
+import { Dibs3603D } from './dibs3603d';
+
+const origin = {
+  x: 0,
+  y: -1.4,
+  z: 0,
+};
 
 export class Tour extends React.Component {
   constructor(props) {
@@ -15,17 +22,21 @@ export class Tour extends React.Component {
 
     this.state = {
       location: props.location,
+      tableX: -1.5,
+      tableY: -0.5,
+      tableZ: -2.3,
     };
   }
 
-  moveLocation = (location, event) => {
+  moveLocation = (location, translate) => {
     Environment.setBackgroundImage(asset(hans[location].assetName));
-    // window.dispatchEvent(
-    //   new CustomEvent('moveLocation', {
-    //     detail: { location, currentLocation: this.state.location },
-    //   })
-    // );
-    this.setState({ location });
+    const { tableX, tableY, tableZ } = this.state;
+    const tableCoordinates = {
+      tableX: tableX + origin.x - translate[0],
+      tableY: tableY + origin.y - translate[1],
+      tableZ: tableZ + origin.z - translate[2],
+    };
+    this.setState({ location, ...tableCoordinates });
   };
 
   renderNavTiles = () => {
@@ -33,14 +44,12 @@ export class Tour extends React.Component {
     const adjacentLocations = currentLocation.links;
 
     return adjacentLocations.map(location => {
-      console.log(location.link);
-      console.log(location.translate);
       return (
-        <View style={{ transform: [location.translate] }}>
+        <View style={{ transform: [{ translate: location.translate }] }}>
           <VrButton
             style={styles.navButton}
-            onClick={event => {
-              return this.moveLocation(location.link, event);
+            onClick={e => {
+              return this.moveLocation(location.link, location.translate);
             }}
           />
         </View>
@@ -49,7 +58,13 @@ export class Tour extends React.Component {
   };
 
   render() {
-    return <View>{this.renderNavTiles()}</View>;
+    const { tableX, tableY, tableZ } = this.state;
+    return (
+      <View>
+        {this.renderNavTiles()}
+        <Dibs3603D x={tableX} y={tableY} z={tableZ} />
+      </View>
+    );
   }
 }
 
