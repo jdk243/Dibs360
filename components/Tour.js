@@ -32,9 +32,9 @@ export class Tour extends React.Component {
     Environment.setBackgroundImage(asset(hans[location].assetName));
     const { tableX, tableY, tableZ } = this.state;
     const tableCoordinates = {
-      tableX: tableX + origin.x - translate[0],
-      tableY: tableY + origin.y - translate[1],
-      tableZ: tableZ + origin.z - translate[2],
+      tableX: (parseFloat(tableX) + origin.x - translate[0]).toFixed(2),
+      tableY: (parseFloat(tableY) + origin.y - translate[1]).toFixed(2),
+      tableZ: (parseFloat(tableZ) + origin.z - translate[2]).toFixed(2),
     };
     this.setState({ location, ...tableCoordinates });
   };
